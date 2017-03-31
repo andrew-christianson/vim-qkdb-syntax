@@ -13,13 +13,13 @@ endif
 " endif
 
 " sync, even k functions can ramble..
-if main_syntax == 'k'
- if exists("k_minlines")
+"if main_syntax == 'k'
+if exists("k_minlines")
   exec "syn sync minlines=" . k_minlines
- else
+else
   syn sync minlines=100
- endif
 endif
+"endif
 
 setlocal comments=://,:/
 
