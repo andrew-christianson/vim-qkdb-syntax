@@ -4,10 +4,8 @@
 " Last Change: 2010.08.21
 
 " Remove any old syntax stuff hanging around
-syn clear
-
-if !exists("main_syntax")
- let main_syntax = 'q'
+if exists("b:current_syntax")
+  finish
 endif
 
 " Read the k syntax to start with
@@ -169,7 +167,3 @@ if !exists("did_q_syntax_inits")
  endif
 
 let b:current_syntax = "q"
-
-if main_syntax == 'q'
- unlet main_syntax
-endif

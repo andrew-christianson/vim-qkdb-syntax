@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.k		setfiletype k
+au BufRead,BufNewFile *.k set filetype=k

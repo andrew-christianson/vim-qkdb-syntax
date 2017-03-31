@@ -4,11 +4,13 @@
 " Last Change: 2011.04.04
 
 " Remove any old syntax stuff hanging around
-syn clear
-
-if !exists("main_syntax")
- let main_syntax = 'k'
+if exists("b:current_syntax")
+  finish
 endif
+" syn clear
+" if !exists("main_syntax")
+"  let main_syntax = 'k'
+" endif
 
 " sync, even k functions can ramble..
 if main_syntax == 'k'
@@ -557,6 +559,6 @@ if !exists("did_k_syntax_inits")
 
 let b:current_syntax = "k"
 
-if main_syntax == 'k'
- unlet main_syntax
-endif
+" if main_syntax == 'k'
+"  unlet main_syntax
+" endif
